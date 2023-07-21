@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes ping-pong {
+            from {
+                left: 0;
+            }
+            to {
+                left: 600px;
+                background-color: fuchsia;
+            }
+        }
+        @keyframes bounce {
+            0% {
+                top: -25px;
+                left: -25px;
+                scale: 0.5;
+            }
+            12.5% {
+                scale: 1;
+            }
+            25% {
+                left: 150px;
+                top: 225px;
+                background-color: blue;
+                scale: 0.5;
+            }
+            37.5% {
+                scale: 1;
+            }
+            50% {
+                left: 300px;
+                top: -25px;
+                background-color: red;
+                scale: 0.5;
+            }
+            62.5% {
+                scale: 1;
+            }
+            75% {
+                left: 450px;
+                top: 225px;
+                background-color: blue;
+                scale: 0.5;
+            }
+            87.5% {
+                scale: 1;
+            }
+            100% {
+                left: 625px;
+                top: -25px;
+                scale: 0.5;
+                background-color: rebeccapurple;
+            }
+        }
+        .stage {
+            width: 700px;
+            height: 300px;
+            border: 2px solid tomato;
+            background-color: yellow;
+        }
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aqua;
+            position: relative;
+            /* animation: ping-pong 2s ease-in-out 0.5s infinite alternate; */
+            animation: bounce 0.75s ease-in-out 0.1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore CSS Animations</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
